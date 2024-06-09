@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Hotel</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <header>
+        <h1>Booking Hotel</h1>
+        <p>Indiquez vos dates de réservation - Toute annulation doit se faire 48h avant</p>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>France - Étranger</h2>
+            <form id="bookingForm">
+                <label for="location">Lieu de séjour</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="arrival">Arrivée</label>
+                <input type="date" id="arrival" name="arrival" required>
+
+                <label for="departure">Départ</label>
+                <input type="date" id="departure" name="departure" required>
+
+                <label for="adults">Adulte</label>
+                <div class="number-control">
+                    <button type="button" onclick="updateCount('adults', -1)">-</button>
+                    <input type="number" id="adults" name="adults" value="0" readonly>
+                    <button type="button" onclick="updateCount('adults', 1)">+</button>
+                </div>
+
+                <label for="children">Enfant</label>
+                <div class="number-control">
+                    <button type="button" onclick="updateCount('children', -1)">-</button>
+                    <input type="number" id="children" name="children" value="0" readonly>
+                    <button type="button" onclick="updateCount('children', 1)">+</button>
+                </div>
+
+                <div id="childrenAges"></div>
+
+                <label for="rooms">Chambre</label>
+                <div class="number-control">
+                    <button type="button" onclick="updateCount('rooms', -1)">-</button>
+                    <input type="number" id="rooms" name="rooms" value="0" readonly>
+                    <button type="button" onclick="updateCount('rooms', 1)">+</button>
+                </div>
+
+                <label for="work">
+                    <input type="checkbox" id="work" name="work"> Je voyage pour le travail
+                </label>
+
+                <button id="searchButton" type="button" onclick="submitForm()">Rechercher</button>
+                <button type="reset">Effacer</button>
+            </form>
+        </div>
+        <div class="confirmation-container">
+            <h2>Confirmation réservation</h2>
+            <p>Nombre(s) d'adulte(s) : <span id="confirmAdults">0</span></p>
+            <p>Nombre(s) d'enfant(s) : <span id="confirmChildren">0</span></p>
+            <p>Nombre(s) de chambre(s) : <span id="confirmRooms">0</span></p>
+            <p>Voyage pour le travail : <span id="confirmWork">Non</span></p><br><br><br>
+
+            <h2>Un problème ?</h2>
+            <p>Numéro de téléphone : +33 1 23 45 67 89</p>
+            <p>Adresse : 123 Rue de Paris, 75001 Paris, France</p>
+            <p>Adresse Mail : hotelbooking@gmail.com</p>
+            <p>Site internet : <a href="http://www.hotel-booking.fr" target="_blank">www.hotel-booking.fr</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Indiquez vos dates de réservation - Toute annulation doit se faire avant 48h</p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>

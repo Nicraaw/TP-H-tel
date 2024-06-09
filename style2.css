@@ -1,0 +1,176 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('hotel.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #800000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #800000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+    margin: auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+    /* Ajustement pour le header */
+    margin-bottom: 100px;
+    /* Ajustement pour le footer */
+}
+
+.form-container,
+.confirmation-container {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    /* Pour espacer les conteneurs */
+}
+
+h2 {
+    text-align: center;
+    color: #800000;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.number-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.number-control button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.number-control button:hover {
+    background-color: #a00000;
+}
+
+.number-control input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button[type="button"],
+button[type="reset"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #000080;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+button[type="button"]:hover,
+button[type="reset"]:hover {
+    background-color: #003366;
+}
+
+#childrenAges label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#childrenAges input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-container {
+    display: none;
+}
+
+.confirmation-container p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.confirmation .confirmation-container span {
+    font-weight: bold;
+    color: #333;
+}
